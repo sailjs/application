@@ -6,7 +6,7 @@ function(require, mocha, chai, results) {
   mocha.setup('bdd');
   expect = chai.expect
   
-  require(['test/controller.test'],
+  require(['test/application.test'],
   function() {
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
     else { results(mocha.run()); }
