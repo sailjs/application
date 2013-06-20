@@ -5,6 +5,7 @@ function(render, Emitter, clazz) {
   
   function Application() {
     Application.super_.call(this);
+    this.render = render;
     this.rootController = undefined;
   }
   clazz.inherits(Application, Emitter);
