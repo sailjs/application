@@ -31,7 +31,8 @@
     "deamdify": "0.1.x"
   },
   "dependencies": {
-    "class": "git://github.com/anchorjs/class.git"
+    "class": "git://github.com/anchorjs/class.git",
+    "render": "git://github.com/sailjs/render.git"
   },
   "browserify": {
     "transform": "deamdify"
@@ -39,7 +40,8 @@
   "volo": {
     "dependencies": {
       "class": "github:anchorjs/class/master",
-      "events": "github:anchorjs/events/master"
+      "events": "github:anchorjs/events/master",
+      "render": "github:sailjs/render/master"
     }
   }
 }

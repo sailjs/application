@@ -1,6 +1,7 @@
-define(['events',
+define(['render',
+        'events',
         'class'],
-function(Emitter, clazz) {
+function(render, Emitter, clazz) {
   
   function Application() {
     Application.super_.call(this);
@@ -12,9 +13,17 @@ function(Emitter, clazz) {
     this.willLaunch();
     this.launch();
     this.didLaunch();
+    
+    render.$(document).ready(function() {
+      this.willDisplay();
+      this.display();
+      this.didDisplay();
+    });
   };
   
-  Application.prototype.launch = function() {
+  Application.prototype.launch = function() {};
+  
+  Application.prototype.display = function() {
     if (!this.rootController) throw new Error('No root controller initialized by application.');
     
     this.rootController.willAddEl();
@@ -24,6 +33,8 @@ function(Emitter, clazz) {
   
   Application.prototype.willLaunch = function() {};
   Application.prototype.didLaunch = function() {};
+  Application.prototype.willDisplay = function() {};
+  Application.prototype.didDisplay = function() {};
   
   return Application;
 });

@@ -9,7 +9,8 @@
   ],
   "dependencies": {
     "anchorjs/class": "*",
-    "anchorjs/events": "*"
+    "anchorjs/events": "*",
+    "sailjs/render": "*"
   },
   "license": "MIT"
 }
