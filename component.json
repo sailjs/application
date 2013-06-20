@@ -1,0 +1,15 @@
+{
+  "name": "application",
+  "version": "0.0.0",
+  "description": "Base class for applications in Sail.js.",
+  "repo": "sailjs/application",
+  "main": "application.js",
+  "scripts": [
+    "application.js"
+  ],
+  "dependencies": {
+    "anchorjs/class": "*",
+    "anchorjs/events": "*"
+  },
+  "license": "MIT"
+}
