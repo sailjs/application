@@ -10,7 +10,7 @@ function(render, Emitter, clazz) {
   }
   clazz.inherits(Application, Emitter);
   
-  Application.prototype.run = function {
+  Application.prototype.run = function() {
     this.willLaunch();
     this.launch();
     this.didLaunch();

@@ -7,7 +7,9 @@ require.config({
   },
   packages: [
     { name: 'application', location: '../../../..', main: 'application' },
-    { name: 'events' }
+    { name: 'dom' },
+    { name: 'events' },
+    { name: 'render' }
   ],
   shim: {
     'mocha': {
