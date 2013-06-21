@@ -15,10 +15,11 @@ function(render, Emitter, clazz) {
     this.launch();
     this.didLaunch();
     
+    var self = this;
     render.$(document).ready(function() {
-      this.willDisplay();
-      this.display();
-      this.didDisplay();
+      self.willDisplay();
+      self.display();
+      self.didDisplay();
     });
   };
   
