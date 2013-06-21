@@ -6,7 +6,7 @@ function(render, Emitter, clazz) {
   function Application() {
     Application.super_.call(this);
     this.render = render;
-    this.rootController = undefined;
+    this.controller = undefined;
   }
   clazz.inherits(Application, Emitter);
   
@@ -25,11 +25,11 @@ function(render, Emitter, clazz) {
   Application.prototype.launch = function() {};
   
   Application.prototype.display = function() {
-    if (!this.rootController) throw new Error('No root controller initialized by application.');
+    if (!this.controller) throw new Error('No controller initialized by application.');
     
-    this.rootController.willAddEl();
-    this.rootController.el.prependTo(document.body);
-    this.rootController.didAddEl();
+    this.controller.willAddEl();
+    this.controller.el.prependTo(document.body);
+    this.controller.didAddEl();
   };
   
   Application.prototype.willLaunch = function() {};
